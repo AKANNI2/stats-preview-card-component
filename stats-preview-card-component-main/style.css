@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsl(233, 47%, 7%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin: 15rem 0;
+}
+
+.card {
+  width: 94rem;
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 0.9rem;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+}
+
+.text-box {
+  padding: 6.4rem 10.2rem 6.4rem 7.2rem;
+}
+
+.text-heading {
+  color: hsl(0, 0%, 100%);
+  font-size: 3.2rem;
+  line-height: 1.2;
+  margin-bottom: 2.8rem;
+}
+
+.text-heading span {
+  color: hsl(277, 64%, 61%);
+}
+
+.text-description {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 5.6rem;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stats p:first-child {
+  color: hsl(0, 0%, 100%);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.stats p:last-child {
+  color: hsla(0, 0%, 100%, 0.6);
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.img-box {
+  background: linear-gradient(
+      to bottom right,
+      hsl(277, 100%, 20%, 0.6),
+      hsl(277, 100%, 25%, 0.6)
+    ),
+    url(images/image-header-desktop.jpg);
+  background-size: cover;
+}
+
+.attribution {
+  font-size: 2rem;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+}
+
+.attribution a {
+  font-size: 1.2rem;
+  color: hsl(277, 64%, 61%);
+  font-weight: 700;
+}
+
+/* Below 950px */
+
+@media (max-width: 59em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .container {
+    /* height: 100vh; */
+    margin: 10rem 0;
+  }
+
+  .attribution {
+    font-size: 1.6rem;
+  }
+}
+
+/* Below 864px */
+
+@media (max-width: 54em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* Below 416px */
+
+@media (max-width: 49em) {
+  .container {
+    /* height: 0; */
+  }
+  .card {
+    width: 35rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30fr 70fr;
+  }
+
+  .img-box {
+    grid-row: 1 / 2;
+  }
+
+  .text-box {
+    padding: 4rem;
+  }
+
+  .text-heading {
+    text-align: center;
+    font-size: 2.8rem;
+  }
+
+  .text-description {
+    text-align: center;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .stats p:first-child {
+    text-align: center;
+  }
+
+  .stats p:last-child {
+    font-size: 0.6rem;
+  }
+}
